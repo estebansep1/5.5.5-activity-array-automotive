@@ -14,8 +14,27 @@ console.log(v.make)
 //TO DO: Code the Car subclass here or in index.js file, i.e. class Car extends Vehicle ...
 
 
-
-
+class Car extends VehicleModule {
+    constructor (make, model, year, color, mileage){
+        super(make,model,year,color,mileage);
+        this.maxPassengers = 5;
+        this.passenger = 0;
+        this.numberOfWheels = 4;
+        this.maxSpeed = 160;
+        this.fuel = 10
+    }
+    loadPassenger(num) {
+        if(this.passengers < this.maxPassengers){
+            console.log("There is room for more people in the Car.")
+        }
+        else if (this.passengers = this.maxPassengers){
+            console.log("The car is at max capacity")
+        }
+        else if (this.passengers > this.maxPassengers){
+            console.log("There are no more seats available")
+        }
+    }
+}
 
 
 
